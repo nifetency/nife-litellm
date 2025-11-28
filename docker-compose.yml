@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  litellm-app:
+    build: .
+    container_name: litellm-docker-app
+    environment:
+      - MODEL_ID=gpt-3.5-turbo
+      - API_KEY=${OPENAI_API_KEY}
+      - PROMPTS=["What is machine learning?", "Explain Docker in one sentence"]
+      - VERBOSE=true
+    volumes:
+      - ./output:/app/output
+    networks:
+      - litellm-network
+
+networks:
+  litellm-network:
+    driver: bridge

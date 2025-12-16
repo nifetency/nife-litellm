@@ -1,14 +1,12 @@
-# Environment variables
-.env
-.env.local
-.env.*.local
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+env/
+venv/
+ENV/
 build/
 develop-eggs/
 dist/
@@ -25,11 +23,14 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual environments
-venv/
-ENV/
-env/
-.venv
+# Flask
+instance/
+.webassets-cache
+
+# Environment
+.env
+.env.local
+.env.*.local
 
 # IDE
 .vscode/
@@ -37,23 +38,14 @@ env/
 *.swp
 *.swo
 *~
-.DS_Store
 
-# Docker
-.docker/
+# OS
+.DS_Store
+Thumbs.db
 
 # Logs
 *.log
 logs/
 
-# Output
-output/
-results/
-
-# OS
-Thumbs.db
-.DS_Store
-
-# Temporary files
-*.tmp
-*.temp
+# Docker
+*.pid

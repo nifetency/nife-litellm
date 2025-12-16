@@ -1,4 +1,4 @@
-litellm
-python-dotenv==1.0.0
-requests==2.31.0
-google-generativeai
+flask==3.0.0
+flask-cors==4.0.0
+litellm==1.49.3
+gunicorn==21.2.0

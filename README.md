@@ -15,6 +15,16 @@
 
 ## ⚡ Quick Start
 
+### Using the Pre-Built Image (GHCR)
+
+```bash
+# Pull the published image
+docker pull ghcr.io/nifetency/nife-litellm:latest
+
+# Run
+docker run -d -p 8080:8080 --name nife-llmlite ghcr.io/nifetency/nife-litellm:latest
+```
+
 ### Using Docker Compose (Recommended)
 
 ```bash
@@ -429,7 +439,7 @@ spec:
     spec:
       containers:
       - name: nife-llmlite
-        image: your-registry/nife-llmlite:latest
+        image: ghcr.io/nifetency/nife-litellm:latest
         ports:
         - containerPort: 8080
         env:
